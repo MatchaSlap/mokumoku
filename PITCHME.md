@@ -42,13 +42,11 @@ AWSを使ってサーバレスを実現
 ---
 
 ### API作りたい
-
+API作るときは
 ```bash
 $ amplify add api
 ```
-
 あとはモデル教えてあげる  
-
 ```
 type Blog @model {
   id: ID!
@@ -72,7 +70,7 @@ type Comment @model {
 ---
 
 ### ユーザ認証使いたい
-
+ユーザ認証使いたいときは
 ```bash
 $ amplify add auth
 ```
@@ -82,11 +80,11 @@ cognito、フェデレーションも可能
 ---
 
 ### ファイル管理使いたい
-
+ファイル管理したいときは
 ```bash
 $ amplify add storage
 ```
-
+フロントからは
 ```javascript
 import { Storage } from "aws-amplify";
 // get
@@ -96,7 +94,6 @@ Storage.put('test.txt', 'Hello')
     .then (result => console.log(result)) // {key: "test.txt"}
     .catch(err => console.log(err));
 ```
-
 認可レベルも指定できる。
 
 ---
