@@ -10,7 +10,7 @@
 ---
 ### システム作るときって
 
-![](./resource/002.svg)  
+![](./resource/002.jpeg)  
 
 - バックエンドって大変
   - DB周り(構築、メンテ)
@@ -31,12 +31,12 @@ Web開発のためのJSライブラリ。
 こちらで説明↓
 https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-aws-amplify-122274815  
 
-AWSを使ってサーバレスを実現  
-- DB：DynamoDB  
-- ストレージ：S3  
-- ユーザ管理：cognito  
-- デプロイ：S3+cloudfront  
-- API：API gateway/lambda or Appsync  
+- AWSを使ってサーバレスを実現  
+  - DB：DynamoDB  
+  - ストレージ：S3  
+  - ユーザ管理：cognito  
+  - デプロイ：S3+cloudfront  
+  - API：API gateway/lambda or Appsync  
 
 ---
 
@@ -46,7 +46,8 @@ AWSを使ってサーバレスを実現
 $ amplify add api
 ```
 
-あとはモデル教えてあげる  
+- あとはモデル教えてあげる  
+
 ```
 type Blog @model {
   id: ID!
@@ -74,7 +75,7 @@ type Comment @model {
 amplify add auth
 ```
 
-cognito、フェデレーションも可能  
+- cognito、フェデレーションも可能  
 
 ---
 
@@ -84,7 +85,7 @@ cognito、フェデレーションも可能
 amplify add storage
 ```
 
-フロントからは
+
 ```javascript
 import { Storage } from "aws-amplify";
 // get
@@ -94,7 +95,8 @@ Storage.put('test.txt', 'Hello')
     .then (result => console.log(result)) // {key: "test.txt"}
     .catch(err => console.log(err));
 ```
-認可レベルも指定できる。
+
+- 認可レベルも指定できる。
 
 ---
 
@@ -105,6 +107,14 @@ http://localhost:8080/
 - 英語アウトプットの場がほしい
 - 日記はネタに困るから、毎日テーマを提供する
 - あとは普通のブログサービスと同じ
+
+---
+
+#### aaa
+
+##### aaa
+
+###### aaa
 
 ---
 
