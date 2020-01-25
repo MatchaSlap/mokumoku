@@ -10,14 +10,13 @@
 ---
 ### システム作るときって
 
-![](./resource/002.jpeg)
+![](./resource/002.svg)  
+
 - バックエンドって大変
-  - DB周り(構築、、メンテ、、)
-  - API(フロントの要望に合わせて、、)
+  - DB周り(構築、メンテ)
+  - API(フロントの要望に合わせて？)
   - ファイル管理(セキュリティ？)
   - ユーザ管理(認証？権限？)
-
-でもここって共通化できそう？
 
 ---
 ### AWS amplify
@@ -41,17 +40,12 @@ AWSを使ってサーバレスを実現
 
 ---
 
+### API作るとき
+
 ```
-console.log(aaa)
+$ amplify add api
 ```
 
----
-
-### API作りたい
-API作るときは  
-```
-amplify add api
-```
 あとはモデル教えてあげる  
 ```
 type Blog @model {
@@ -71,12 +65,11 @@ type Comment @model {
   post: Post @connection(name: "PostComments")
 }
 ```
-これでテーブルとAPIが作成される  
 
 ---
 
 ### ユーザ認証使いたい
-ユーザ認証使いたいときは
+
 ```
 amplify add auth
 ```
@@ -86,10 +79,11 @@ cognito、フェデレーションも可能
 ---
 
 ### ファイル管理使いたい
-ファイル管理したいときは
+
 ```
 amplify add storage
 ```
+
 フロントからは
 ```javascript
 import { Storage } from "aws-amplify";
