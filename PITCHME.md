@@ -45,6 +45,7 @@ https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-
 $ amplify add api
 ```
 
+- あとはモデル
 
 ```
 type Blog @model {
