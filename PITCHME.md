@@ -68,15 +68,6 @@ type Comment @model {
 
 ---
 
-### ユーザ認証使いたい
-
-```
-amplify add auth
-```
-
-
----
-
 ### ファイル管理使いたい
 
 ```
