@@ -46,7 +46,6 @@ https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-
 $ amplify add api
 ```
 
-- あとはモデル教えてあげる  
 
 ```
 type Blog @model {
@@ -75,7 +74,6 @@ type Comment @model {
 amplify add auth
 ```
 
-- cognito、フェデレーションも可能  
 
 ---
 
@@ -96,8 +94,6 @@ Storage.put('test.txt', 'Hello')
     .catch(err => console.log(err));
 ```
 
-- 認可レベルも指定できる。
-
 ---
 
 ### 今作ってるもの(進行形)
@@ -107,14 +103,6 @@ http://localhost:8080/
 - 英語アウトプットの場がほしい
 - 日記はネタに困るから、毎日テーマを提供する
 - あとは普通のブログサービスと同じ
-
----
-
-#### aaa
-
-##### aaa
-
-###### aaa
 
 ---
 
