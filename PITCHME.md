@@ -1,24 +1,90 @@
-# aaa
-## bbb
-### こんにちは！
+# AWS Amplifyの紹介
+## yuki
 
+---
+### 自己紹介
+ひらまつです。
+- 仕事：PM(パッケージ導入)　開発は趣味レベル
+- 触ったことあり：js/c#/java/python/など
+- 好きなもの：ベース/水泳/フェス/サイクリングなど
 
-これはサンプルのスライド資料です。
+---
+### システム作るときって
+![](./resource/002.svg)
+- バックエンドって大変
+  - DB周り(構築、、メンテ、、)
+  - API(フロントの要望に合わせて、、)
+  - ファイル管理(セキュリティ？)
+  - ユーザ管理(認証？権限？)
+
+でもここって共通化できそう？
+→ BaaS(Backend as a Service)
+
+---
+### AWS amplify
+Web開発のためのJSライブラリ。
+サーバレスなバックエンドを簡単に構築できる！
+![](./resource/003.jpg)
 
 
 ---
+### できること
+こちらで説明↓
+https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-aws-amplify-122274815
 
+AWSを使ってサーバレスを実現
+- DB：DynamoDB
+- ストレージ：S3
+- ユーザ管理：cognito
+- デプロイ：S3+cloudfront
+- API：API gateway/lambda or Appsync
 
-### 2枚目のスライド
+### API作りたい
+```bash
+$ amplify add api
+```
+あとはモデル教えてあげる
+```
+type Blog @model {
+  id: ID!
+  name: String!
+  posts: [Post] @connection(name: "BlogPosts")
+}
+type Post @model {
+  id: ID!
+  title: String!
+  blog: Blog @connection(name: "BlogPosts")
+  comments: [Comment] @connection(name: "PostComments")
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
+}
+```
+これでテーブルとAPIが作成される
 
+### ユーザ認証使いたい
+```bash
+$ amplify add auth
+```
+cognito、フェデレーションも可能
 
----
+### ファイル管理使いたい
+```bash
+$ amplify add storage
+```
+```javascript
+import { Storage } from "aws-amplify";
+// get
+Storage.get('welcome.png', { level: 'public' });
+// push
+Storage.put('test.txt', 'Hello')
+    .then (result => console.log(result)) // {key: "test.txt"}
+    .catch(err => console.log(err));
+```
+認可レベルも指定できる。
 
-
-### 3枚目のスライド
-
-
----
-
+### 
 
 ### おわり
