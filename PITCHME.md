@@ -91,7 +91,7 @@ Storage.put('test.txt', 'Hello')
 ### 今作ってるもの(進行形)
 
 ###### 英語アウトプットサービス  
-http://localhost:8080/postlist    
+http://localhost:8080/post    
 
 - 英語アウトプットの場がほしい
 - 日記はネタに困るから、毎日テーマを提供する
