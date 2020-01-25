@@ -43,7 +43,7 @@ AWSを使ってサーバレスを実現
 
 ### API作りたい
 API作るときは
-```bash
+```
 $ amplify add api
 ```
 あとはモデル教えてあげる  
@@ -71,7 +71,7 @@ type Comment @model {
 
 ### ユーザ認証使いたい
 ユーザ認証使いたいときは
-```bash
+```
 $ amplify add auth
 ```
 
@@ -81,7 +81,7 @@ cognito、フェデレーションも可能
 
 ### ファイル管理使いたい
 ファイル管理したいときは
-```bash
+```
 $ amplify add storage
 ```
 フロントからは
