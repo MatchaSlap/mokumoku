@@ -28,6 +28,7 @@ Web開発のためのJSライブラリ。
 
 
 ---
+
 ### できること
 こちらで説明↓
 https://www.slideshare.net/AmazonWebServicesJapan/aws-black-belt-online-seminar-aws-amplify-122274815
@@ -38,6 +39,8 @@ AWSを使ってサーバレスを実現
 - ユーザ管理：cognito
 - デプロイ：S3+cloudfront
 - API：API gateway/lambda or Appsync
+
+---
 
 ### API作りたい
 ```bash
@@ -64,11 +67,15 @@ type Comment @model {
 ```
 これでテーブルとAPIが作成される
 
+---
+
 ### ユーザ認証使いたい
 ```bash
 $ amplify add auth
 ```
 cognito、フェデレーションも可能
+
+---
 
 ### ファイル管理使いたい
 ```bash
@@ -85,6 +92,17 @@ Storage.put('test.txt', 'Hello')
 ```
 認可レベルも指定できる。
 
-### 
+---
+
+### 今作ってるもの(進行形)
+英語アウトプットサービス
+http://localhost:8080/
+
+- 英語アウトプットの場がほしい
+- 日記はネタに困るから、毎日テーマを提供する
+- あとは普通のブログサービスと同じ
+
+---
 
 ### おわり
+Amplifyは、簡単なサービスをすぐ作ってリリースするのには良い。
