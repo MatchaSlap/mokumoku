@@ -41,8 +41,14 @@ AWSを使ってサーバレスを実現
 
 ---
 
+```
+console.log(aaa)
+```
+
+---
+
 ### API作りたい
-API作るときは
+API作るときは  
 ```
 amplify add api
 ```
@@ -110,3 +116,7 @@ http://localhost:8080/
 
 ### おわり
 Amplifyは、簡単なサービスをすぐ作ってリリースするのには良い。  
+
+(その他)なぜfirebase使わないの？
+- GraphQL使ってみたかった
+- awsの方が慣れてた
